@@ -9,6 +9,6 @@ jobs:
   include:
     - stage: Build and push image
       script:
-      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+      - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
       - docker build -t diemol/chrome-remote-cdp .
       - docker push diemol/chrome-remote-cdp:latest
